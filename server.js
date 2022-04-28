@@ -11,8 +11,8 @@ const dbURI = "mongodb+srv://fais:0501484127@cluster0.sunpt.mongodb.net/myFirstD
 // })
 
 // const db = mongoose.connection
-db.on("error", (err) => { console.error(err) })
-db.once("open", () => { console.log("DB started successfully") })
+// db.on("error", (err) => { console.error(err) })
+// db.once("open", () => { console.log("DB started successfully") })
 
 app.use(express.json());
 app.use('/api/auth', authRoute);
