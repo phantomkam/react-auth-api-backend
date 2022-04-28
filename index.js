@@ -6,7 +6,7 @@ const noteRoute = require('./routes/note.routes.js');
 
 const MONGO_USERNAME = 'doadmin';
 const MONGO_PASSWORD = '9iA521TR83ESh4O6';
-const MONGO_HOSTNAME = '127.0.0.1';
+const MONGO_HOSTNAME = 'db-mongodb-nyc3-21958-b7113ed8.mongo.ondigitalocean.com';
 const MONGO_PORT = '27017';
 const MONGO_DB = 'sharkinfo';
 
