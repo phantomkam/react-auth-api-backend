@@ -4,7 +4,7 @@ const app = express();
 const authRoute = require('./routes/auth');
 const noteRoute = require('./routes/note.routes.js');
 
-const dbURI = "mongodb://localhost:27017/pies";
+const dbURI = "mongodb+srv://doadmin:show-password@db-mongodb-nyc3-21958-b7113ed8.mongo.ondigitalocean.com/admin?authSource=admin&replicaSet=db-mongodb-nyc3-21958&tls=true&tlsCAFile=./ca-certificate.crt";
 app.use(express.json());
 
 app.use('/api/auth', authRoute);
