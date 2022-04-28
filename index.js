@@ -10,7 +10,12 @@ app.use(express.json());
 app.use('/api/auth', authRoute);
 app.use('/api', noteRoute);
 
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+mongoose.connect(dbURI, { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true, 
+    useCreateIndex: true,
+    useFindAndModify: false
+})
 const db = mongoose.connection
 
 db.on("error", (err) => { console.error(err) })
