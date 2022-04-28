@@ -7,8 +7,7 @@ const dbURI = "mongodb+srv://fais:0501484127@cluster0.sunpt.mongodb.net/myFirstD
 
 mongoose.connect(dbURI, { 
     useNewUrlParser: true, 
-    useUnifiedTopology: true, 
-    useCreateIndex: true
+    useUnifiedTopology: true
 })
 
 const db = mongoose.connection
