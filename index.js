@@ -4,7 +4,13 @@ const app = express();
 const authRoute = require('./routes/auth');
 const noteRoute = require('./routes/note.routes.js');
 
-const dbURI = "mongodb+srv://<doadmin>:<9iA521TR83ESh4O6>@<db-mongodb-nyc3-21958-b7113ed8.mongo.ondigitalocean.com>/test?retryWrites=true&w=majority";
+const MONGO_USERNAME = 'doadmin';
+const MONGO_PASSWORD = '9iA521TR83ESh4O6';
+const MONGO_HOSTNAME = '127.0.0.1';
+const MONGO_PORT = '27017';
+const MONGO_DB = 'sharkinfo';
+
+const dbURI = `mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin`;
 app.use(express.json());
 
 app.use('/api/auth', authRoute);
