@@ -4,7 +4,7 @@ const app = express();
 const authRoute = require('./routes/auth');
 const noteRoute = require('./routes/note.routes.js');
 
-const dbURI = "mongodb://localhost:27017/pies";
+const dbURI = "mongodb+srv://fais:0501484127@cluster0.sunpt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 app.use(express.json());
 
 app.use('/api/auth', authRoute);
