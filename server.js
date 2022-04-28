@@ -15,7 +15,7 @@ const db = mongoose.connection
 db.on("error", (err) => { console.error(err) })
 db.once("open", () => { console.log("DB started successfully") })
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use('/api/auth', authRoute);
 app.use('/api', noteRoute);
 app.listen(3000, () => { console.log("Server started: 3000") })
